@@ -31,7 +31,6 @@ app.get("/api/user", (req, res) => {
     });
 });
 
-// POST /api/user/selectitem
 app.post("/api/user/selectitem", async (req, res) => {
   try {
     console.log(req.body);
@@ -235,7 +234,11 @@ app.get("/api/dailymeal", (req, res) => {
     .then((list) => res.json(list))
     .catch(() => res.status(500).end());
 });
-
+app.get("/", (req, res) => {
+  res.json({
+    message: "Backend API is Working!!!🦄🌈✨👋🌎🌍🌏✨🌈🦄",
+  });
+});
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });

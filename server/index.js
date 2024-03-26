@@ -1,4 +1,3 @@
-"use strict";
 const express = require("express");
 const morgan = require("morgan"); 
 const { check, validationResult } = require("express-validator");

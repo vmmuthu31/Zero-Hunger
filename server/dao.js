@@ -1,6 +1,3 @@
-"use strict"
-
-
 const crypto = require('crypto');
 const sqlite = require('sqlite3');
 const db = new sqlite.Database("zero-hunger.db", (err) => { if (err) throw err });
@@ -295,7 +292,6 @@ exports.isTipUnlocked = (tip) => {
                 return;
 
             } else {
-                //ritorno true se tip è stato sbloccato, false altrimenti
                 const exists = row.match > 0;
                 resolve(exists);
             }
